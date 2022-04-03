@@ -1,0 +1,22 @@
+# List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+# List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: echo 'init script' # runs during prebuild
+    command: echo 'start script'
+             export TZ='Asia/Jakarta'
+             
+             git config --global user.name "Genchler"
+             git config --global user.email "ben.genchler@gmail.com"
+             
+             git config --global alias.cp 'cherry-pick'
+             git config --global alias.c 'commit'
+             git config --global alias.f 'fetch'
+             git config --global alias.rb 'rebase'
+             git config --global alias.rs 'reset'
+             git config --global alias.ck 'checkout'
+             git config --global credential.helper 'cache --timeout=99999999'
+
